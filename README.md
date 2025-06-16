@@ -6,4 +6,4 @@ Threads API ComfyUI Nodes
 4. ThreadsQuickTestNode
 5. ThreadsAllInOneNode
 
-Downloading the threads_workflow.json file to review the node usage in the example.
+Downloading the threads_api_workflow.json file to review the node usage in the example.
