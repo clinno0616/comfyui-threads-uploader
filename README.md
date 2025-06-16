@@ -1,15 +1,9 @@
 Threads API ComfyUI Nodes
-# 權杖管理節點
-"ThreadsTokenManagerNode": ThreadsTokenManagerNode,
 
-# 增強的核心節點
-"ThreadsOfficialFormatNode": ThreadsOfficialFormatNode,
-"ThreadsUserInfoNode": ThreadsUserInfoNode,
-"ThreadsTokenValidatorNode": ThreadsTokenValidatorNode,
-"ThreadsQuickTestNode": ThreadsQuickTestNode,
-   
-# 媒體處理節點
-"ThreadsMediaUploaderNode": ThreadsMediaUploaderNode,
+1. ThreadsTokenManagerNode
+2. ThreadsUserInfoNode
+3. ThreadsTokenValidatorNode
+4. ThreadsQuickTestNode
+5. ThreadsAllInOneNode
 
-# 一體化節點
-"ThreadsAllInOneNode": ThreadsAllInOneNode,
+Downloading the threads_workflow.json file to review the node usage in the example.
