@@ -1,0 +1,841 @@
+{
+  "id": "4cf7f7f5-f630-49e4-8981-37fcfb0bd09b",
+  "revision": 0,
+  "last_node_id": 71,
+  "last_link_id": 87,
+  "nodes": [
+    {
+      "id": 61,
+      "type": "ThreadsAllInOneNode",
+      "pos": [
+        -3352.18798828125,
+        -2269.08984375
+      ],
+      "size": [
+        400,
+        544
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "access_token",
+          "type": "STRING",
+          "widget": {
+            "name": "access_token"
+          },
+          "link": 66
+        },
+        {
+          "name": "media_url",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "media_url"
+          },
+          "link": 83
+        },
+        {
+          "name": "client_secret",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "client_secret"
+          },
+          "link": 71
+        }
+      ],
+      "outputs": [
+        {
+          "name": "post_id",
+          "type": "STRING",
+          "links": [
+            68
+          ]
+        },
+        {
+          "name": "permalink",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "success",
+          "type": "BOOLEAN",
+          "links": null
+        },
+        {
+          "name": "status_message",
+          "type": "STRING",
+          "links": [
+            67
+          ]
+        },
+        {
+          "name": "media_url_used",
+          "type": "STRING",
+          "links": [
+            74
+          ]
+        },
+        {
+          "name": "processing_log",
+          "type": "STRING",
+          "links": [
+            75
+          ]
+        },
+        {
+          "name": "final_token",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ThreadsAllInOneNode"
+      },
+      "widgets_values": [
+        "",
+        "如果看到這個影片，就表示在ComfyUI WorkFlow中，可以將FLOAT生成的影片透過Thread API直接上傳了。雖然Thread API現在還不支援本地上傳，但搭配一些網管設定(Port Forwarding + DDNS + 或向中華電信申請固定IP)加上微軟IIS(Windows 11)當作圖(影片)床，就可以把圖片和影片上傳囉。是說只要指令下的夠清楚，拿Calude AI來寫ComfyUI的Custom Nodes真的很方便，之後再整理一下，把ComfyUI Thread API的程式上傳到GitHub.",
+        "me",
+        "VIDEO_POST",
+        "",
+        "https://www.marthastewart.com/thmb/O75E9rwQRD3F1Q4zFKWDrdsg15c=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/338185-basic-pancakes-09-00b18f8418fd4e52bb2050173d083d04.jpg",
+        true,
+        "imgur",
+        true,
+        "",
+        "",
+        true,
+        10,
+        60,
+        5
+      ]
+    },
+    {
+      "id": 64,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -2884.390869140625,
+        -2020.597412109375
+      ],
+      "size": [
+        440.7062072753906,
+        96.83914184570312
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 65,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -2874.284912109375,
+        -1871.806884765625
+      ],
+      "size": [
+        416.218017578125,
+        317.294189453125
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 75
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "=== Threads 一體化發布開始（增強視頻支援）===\n發布類型: VIDEO_POST\n文本長度: 264 字符\n自動權杖重新整理: True\n視頻檢查超時: 60 秒\n視頻檢查間隔: 5 秒\n\n🔐 權杖驗證階段\n❌ 權杖驗證失敗: ❌ Access Token 為空"
+      ]
+    },
+    {
+      "id": 63,
+      "type": "StringConstant",
+      "pos": [
+        -3340.056640625,
+        -2416.453125
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "title": "MOVIE",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.1",
+        "Node name for S&R": "StringConstant"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 62,
+      "type": "StringConstant",
+      "pos": [
+        -3347.6181640625,
+        -2538.63916015625
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            83
+          ]
+        }
+      ],
+      "title": "JPG",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.1",
+        "Node name for S&R": "StringConstant"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 56,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -2877.218505859375,
+        -2444.819580078125
+      ],
+      "size": [
+        407.6528015136719,
+        177.78343200683594
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 68
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 57,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -2875.883544921875,
+        -2213.650146484375
+      ],
+      "size": [
+        362.5900573730469,
+        130.18206787109375
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 67
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "❌ 權杖驗證失敗: ❌ Access Token 為空"
+      ]
+    },
+    {
+      "id": 41,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -4576.60107421875,
+        -2010.328369140625
+      ],
+      "size": [
+        328.3096008300781,
+        522.4537963867188
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 55
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "❌ Access Token 為空"
+      ]
+    },
+    {
+      "id": 43,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -4203.46337890625,
+        -1939.755126953125
+      ],
+      "size": [
+        218.1427764892578,
+        88
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 48,
+      "type": "ThreadsTokenValidatorNode",
+      "pos": [
+        -4582.2314453125,
+        -2229.95849609375
+      ],
+      "size": [
+        345.3306579589844,
+        166
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "access_token",
+          "type": "STRING",
+          "widget": {
+            "name": "access_token"
+          },
+          "link": 84
+        }
+      ],
+      "outputs": [
+        {
+          "name": "is_valid",
+          "type": "BOOLEAN",
+          "links": null
+        },
+        {
+          "name": "permissions",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "validation_report",
+          "type": "STRING",
+          "links": [
+            55
+          ]
+        },
+        {
+          "name": "needs_refresh",
+          "type": "BOOLEAN",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ThreadsTokenValidatorNode"
+      },
+      "widgets_values": [
+        "",
+        true,
+        7
+      ]
+    },
+    {
+      "id": 49,
+      "type": "ThreadsUserInfoNode",
+      "pos": [
+        -4218.18310546875,
+        -2223.821533203125
+      ],
+      "size": [
+        337.7837829589844,
+        206
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "access_token",
+          "type": "STRING",
+          "widget": {
+            "name": "access_token"
+          },
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "user_id",
+          "type": "STRING",
+          "links": [
+            56
+          ]
+        },
+        {
+          "name": "username",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "user_info",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "success",
+          "type": "BOOLEAN",
+          "links": null
+        },
+        {
+          "name": "message",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "refreshed_token",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ThreadsUserInfoNode"
+      },
+      "widgets_values": [
+        "",
+        true,
+        ""
+      ]
+    },
+    {
+      "id": 53,
+      "type": "StringConstant",
+      "pos": [
+        -4453.97802734375,
+        -2478.0693359375
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            66,
+            84,
+            85,
+            86
+          ]
+        }
+      ],
+      "title": "access_toker",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.1",
+        "Node name for S&R": "StringConstant"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 54,
+      "type": "StringConstant",
+      "pos": [
+        -3757.988525390625,
+        -2496.5947265625
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            71,
+            87
+          ]
+        }
+      ],
+      "title": "client_secret",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.1",
+        "Node name for S&R": "StringConstant"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 50,
+      "type": "ThreadsTokenManagerNode",
+      "pos": [
+        -3807.328125,
+        -2274.8369140625
+      ],
+      "size": [
+        319.4375,
+        210
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "access_token",
+          "type": "STRING",
+          "widget": {
+            "name": "access_token"
+          },
+          "link": 86
+        },
+        {
+          "name": "client_secret",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "client_secret"
+          },
+          "link": 87
+        }
+      ],
+      "outputs": [
+        {
+          "name": "new_access_token",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "success",
+          "type": "BOOLEAN",
+          "links": null
+        },
+        {
+          "name": "status_message",
+          "type": "STRING",
+          "links": [
+            58
+          ]
+        },
+        {
+          "name": "expires_in_days",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "token_type",
+          "type": "STRING",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ThreadsTokenManagerNode"
+      },
+      "widgets_values": [
+        "exchange_token",
+        "",
+        "",
+        7
+      ]
+    },
+    {
+      "id": 46,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -3798.771728515625,
+        -2005.697509765625
+      ],
+      "size": [
+        352.1150817871094,
+        113.6724624633789
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 58
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "❌ 需要提供短期權杖和應用程式密鑰"
+      ]
+    }
+  ],
+  "links": [
+    [
+      55,
+      48,
+      2,
+      41,
+      0,
+      "STRING"
+    ],
+    [
+      56,
+      49,
+      0,
+      43,
+      0,
+      "STRING"
+    ],
+    [
+      58,
+      50,
+      2,
+      46,
+      0,
+      "STRING"
+    ],
+    [
+      66,
+      53,
+      0,
+      61,
+      0,
+      "STRING"
+    ],
+    [
+      67,
+      61,
+      3,
+      57,
+      0,
+      "STRING"
+    ],
+    [
+      68,
+      61,
+      0,
+      56,
+      0,
+      "STRING"
+    ],
+    [
+      71,
+      54,
+      0,
+      61,
+      2,
+      "STRING"
+    ],
+    [
+      74,
+      61,
+      4,
+      64,
+      0,
+      "STRING"
+    ],
+    [
+      75,
+      61,
+      5,
+      65,
+      0,
+      "STRING"
+    ],
+    [
+      83,
+      62,
+      0,
+      61,
+      1,
+      "STRING"
+    ],
+    [
+      84,
+      53,
+      0,
+      48,
+      0,
+      "STRING"
+    ],
+    [
+      85,
+      53,
+      0,
+      49,
+      0,
+      "STRING"
+    ],
+    [
+      86,
+      53,
+      0,
+      50,
+      0,
+      "STRING"
+    ],
+    [
+      87,
+      54,
+      0,
+      50,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.0610764609500138,
+      "offset": [
+        5038.084407326588,
+        2386.6686003763857
+      ]
+    },
+    "frontendVersion": "1.21.7",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
