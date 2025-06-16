@@ -1,8 +1,8 @@
 {
   "id": "4cf7f7f5-f630-49e4-8981-37fcfb0bd09b",
   "revision": 0,
-  "last_node_id": 71,
-  "last_link_id": 87,
+  "last_node_id": 73,
+  "last_link_id": 90,
   "nodes": [
     {
       "id": 61,
@@ -16,7 +16,7 @@
         544
       ],
       "flags": {},
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -124,7 +124,7 @@
         96.83914184570312
       ],
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -160,7 +160,7 @@
         317.294189453125
       ],
       "flags": {},
-      "order": 13,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -264,7 +264,7 @@
         177.78343200683594
       ],
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -300,7 +300,7 @@
         130.18206787109375
       ],
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -338,7 +338,7 @@
         522.4537963867188
       ],
       "flags": {},
-      "order": 8,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -365,42 +365,6 @@
       ]
     },
     {
-      "id": 43,
-      "type": "ShowText|pysssss",
-      "pos": [
-        -4203.46337890625,
-        -1939.755126953125
-      ],
-      "size": [
-        218.1427764892578,
-        88
-      ],
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 56
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "shape": 6,
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-custom-scripts",
-        "ver": "1.2.5",
-        "Node name for S&R": "ShowText|pysssss"
-      },
-      "widgets_values": []
-    },
-    {
       "id": 48,
       "type": "ThreadsTokenValidatorNode",
       "pos": [
@@ -412,7 +376,7 @@
         166
       ],
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -458,110 +422,6 @@
       ]
     },
     {
-      "id": 49,
-      "type": "ThreadsUserInfoNode",
-      "pos": [
-        -4218.18310546875,
-        -2223.821533203125
-      ],
-      "size": [
-        337.7837829589844,
-        206
-      ],
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "access_token",
-          "type": "STRING",
-          "widget": {
-            "name": "access_token"
-          },
-          "link": 85
-        }
-      ],
-      "outputs": [
-        {
-          "name": "user_id",
-          "type": "STRING",
-          "links": [
-            56
-          ]
-        },
-        {
-          "name": "username",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "user_info",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "success",
-          "type": "BOOLEAN",
-          "links": null
-        },
-        {
-          "name": "message",
-          "type": "STRING",
-          "links": null
-        },
-        {
-          "name": "refreshed_token",
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ThreadsUserInfoNode"
-      },
-      "widgets_values": [
-        "",
-        true,
-        ""
-      ]
-    },
-    {
-      "id": 53,
-      "type": "StringConstant",
-      "pos": [
-        -4453.97802734375,
-        -2478.0693359375
-      ],
-      "size": [
-        270,
-        58
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            66,
-            84,
-            85,
-            86
-          ]
-        }
-      ],
-      "title": "access_toker",
-      "properties": {
-        "cnr_id": "comfyui-kjnodes",
-        "ver": "1.1.1",
-        "Node name for S&R": "StringConstant"
-      },
-      "widgets_values": [
-        ""
-      ]
-    },
-    {
       "id": 54,
       "type": "StringConstant",
       "pos": [
@@ -573,7 +433,7 @@
         58
       ],
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -680,7 +540,7 @@
         113.6724624633789
       ],
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -705,6 +565,250 @@
       "widgets_values": [
         "❌ 需要提供短期權杖和應用程式密鑰"
       ]
+    },
+    {
+      "id": 43,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -4203.46337890625,
+        -1939.755126953125
+      ],
+      "size": [
+        218.1427764892578,
+        88
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 53,
+      "type": "StringConstant",
+      "pos": [
+        -4453.97802734375,
+        -2478.0693359375
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            66,
+            84,
+            85,
+            86,
+            89
+          ]
+        }
+      ],
+      "title": "access_toker",
+      "properties": {
+        "cnr_id": "comfyui-kjnodes",
+        "ver": "1.1.1",
+        "Node name for S&R": "StringConstant"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 49,
+      "type": "ThreadsUserInfoNode",
+      "pos": [
+        -4218.18310546875,
+        -2223.821533203125
+      ],
+      "size": [
+        337.7837829589844,
+        206
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "access_token",
+          "type": "STRING",
+          "widget": {
+            "name": "access_token"
+          },
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "user_id",
+          "type": "STRING",
+          "links": [
+            56,
+            90
+          ]
+        },
+        {
+          "name": "username",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "user_info",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "success",
+          "type": "BOOLEAN",
+          "links": null
+        },
+        {
+          "name": "message",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "refreshed_token",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ThreadsUserInfoNode"
+      },
+      "widgets_values": [
+        "",
+        true,
+        ""
+      ]
+    },
+    {
+      "id": 72,
+      "type": "ThreadsQuickTestNode",
+      "pos": [
+        -4194.8984375,
+        -1753.2872314453125
+      ],
+      "size": [
+        400,
+        244
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "access_token",
+          "type": "STRING",
+          "widget": {
+            "name": "access_token"
+          },
+          "link": 89
+        },
+        {
+          "name": "threads_user_id",
+          "type": "STRING",
+          "widget": {
+            "name": "threads_user_id"
+          },
+          "link": 90
+        }
+      ],
+      "outputs": [
+        {
+          "name": "test_result",
+          "type": "STRING",
+          "links": [
+            88
+          ]
+        },
+        {
+          "name": "success",
+          "type": "BOOLEAN",
+          "links": null
+        },
+        {
+          "name": "post_id",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "final_token",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ThreadsQuickTestNode"
+      },
+      "widgets_values": [
+        "",
+        "Quick test from ComfyUI",
+        "me",
+        true,
+        ""
+      ]
+    },
+    {
+      "id": 73,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -3752.597900390625,
+        -1753.488525390625
+      ],
+      "size": [
+        218.1427764892578,
+        88
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss"
+      }
     }
   ],
   "links": [
@@ -819,16 +923,40 @@
       50,
       1,
       "STRING"
+    ],
+    [
+      88,
+      72,
+      0,
+      73,
+      0,
+      "STRING"
+    ],
+    [
+      89,
+      53,
+      0,
+      72,
+      0,
+      "STRING"
+    ],
+    [
+      90,
+      49,
+      0,
+      72,
+      1,
+      "STRING"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.0610764609500138,
+      "scale": 0.7247295000000094,
       "offset": [
-        5038.084407326588,
-        2386.6686003763857
+        5271.128324130143,
+        2313.777744783943
       ]
     },
     "frontendVersion": "1.21.7",
